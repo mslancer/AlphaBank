@@ -10,7 +10,7 @@ public class RegBankTest {
 
     @Test
     void shouldTestValid() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Кузьмин Владислав");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
@@ -20,7 +20,7 @@ public class RegBankTest {
 
     @Test
     void shouldTestValidDoubleName() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Кузьмин Владислав-Владимир");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
@@ -32,7 +32,7 @@ public class RegBankTest {
 
     @Test
     void shouldTestValidDoubleSurname() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Кузьмин-Кузнецов Владислав");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
@@ -44,7 +44,7 @@ public class RegBankTest {
 
     @Test
     void shouldTestInvalidNumber() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Кузьмин Владислав");
         $("[data-test-id=phone] input").setValue("+792763804300");
         $("[data-test-id=agreement]").click();
@@ -56,7 +56,7 @@ public class RegBankTest {
 
     @Test
     void shouldEnglishName() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Kuzmin Vladislav");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
@@ -68,7 +68,7 @@ public class RegBankTest {
 
     @Test
     void shouldNameWithoutSpace() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("КузьминВладислав");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
@@ -80,7 +80,7 @@ public class RegBankTest {
 
     @Test
     void shouldNameWithoutSurname() {
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Кузьмин");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
