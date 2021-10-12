@@ -51,7 +51,7 @@ public class RegBankTest {
         $("[data-test-id=phone] input").setValue("+792763804300");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=phone] .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
 
 
     }
@@ -62,7 +62,7 @@ public class RegBankTest {
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=name] .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
 
     }
@@ -73,7 +73,7 @@ public class RegBankTest {
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=name] .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
 
     }
@@ -84,7 +84,7 @@ public class RegBankTest {
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=name] .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
 
     }
@@ -94,7 +94,7 @@ public class RegBankTest {
         $("[data-test-id=phone] input").setValue("+79276380430");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=name] .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
 
     }
@@ -104,7 +104,7 @@ public class RegBankTest {
         $("[data-test-id=name] input").setValue("Кузьмин Владислав");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=phone] .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
 
     }
@@ -114,7 +114,7 @@ public class RegBankTest {
         $("[data-test-id=name] input").setValue("Кузьмин Владислав");
         $("[data-test-id=phone] input").setValue("+79276380430");
         $(".button").click();
-        $("[data-test-id=agreement] .checkbox__text").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+        $("[data-test-id=agreement].input_invalid .checkbox__text").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
 
 
     }
